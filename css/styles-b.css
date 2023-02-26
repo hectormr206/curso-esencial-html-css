@@ -24,15 +24,15 @@
 }
 
 :root {
-  font-size: 16px;
+  font-size: 17px;
   /* font-family: charter; */
   font-family: "Nunito", system-ui, sans-serif;
   --background: #251f24;
+  --black: #000000;
+  --button: #157efb;
   --white30: white;
   --white20: #a5a3a5;
   --white10: #3a3539;
-  --gray: #fec62e;
-  --button: #157efb;
 }
 
 body {
@@ -45,17 +45,20 @@ a {
   color: var(--white30);
 }
 
-.header {
+.header-content,
+.aside-content {
+  padding-inline: 20px;
 }
 
-.header-content {
-  padding-inline: 20px;
+.header-content h6 {
+  margin-block-start: 40px;
+  margin-block-end: 24px;
 }
 
 header {
   margin-block-start: 20px;
   font-size: 0.875em;
-  color: var(--white);
+  color: var(--white30);
 }
 
 header li {
@@ -77,20 +80,62 @@ header a:hover {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 24px;
+  font-weight: 400;
   margin-block-start: 20px;
   margin-block-end: 16px;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 24px;
+  font-weight: 400;
   margin-block: 40px;
 }
 
 h3 {
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   margin-block: 16px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+aside h6 {
+  margin-block: 16px;
+}
+
+aside ul {
+  padding-inline: 0;
+  margin-block: 0;
+}
+
+aside li {
+  list-style: none;
+  color: var(--white20);
+  padding: 8px;
+}
+
+aside .active {
+  background: var(--black);
+  border-radius: 4px;
+}
+
+aside .active a {
+  color: var(--white30);
+}
+
+aside a {
+  color: var(--white20);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+aside a:hover {
+  color: var(--white30);
 }
 
 hr {
@@ -102,13 +147,15 @@ pre {
   background: var(--white10);
   padding: 40px;
   overflow: auto;
-  border: 10px solid #5551ff;
-  box-shadow: -10px 10px 0 0 #abaaf6;
+  /* border: 10px solid #5551ff; */
+  /* box-shadow: -10px 10px 0 0 #abaaf6; */
   margin-block-end: 30px;
   border-start-start-radius: 8px;
   border-end-start-radius: 8px;
   border-start-end-radius: 8px;
   border-end-end-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 p {
@@ -119,10 +166,9 @@ p {
 blockquote {
   margin-block-start: 80px;
   margin-block-end: 63px;
+  margin-inline: 0;
   background-color: var(--white10);
   border-radius: 8px;
-  line-height: 32px;
-  font-size: 24px;
   padding-inline-start: 24px;
   padding-inline-end: 24px;
   padding-block-start: 24px;
@@ -131,6 +177,26 @@ blockquote {
 
 blockquote p {
   color: var(--white30);
+  font-weight: 700;
+  line-height: 32px;
+}
+
+blockquote span::before {
+  content: "- ";
+}
+
+footer {
+  background: var(--white30);
+  block-size: 174px;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+footer p {
+  color: var(--background);
+  margin-block-start: 0;
+  margin-block-end: 19px;
+  line-height: 44px;
 }
 
 .hero {
@@ -156,12 +222,22 @@ blockquote p {
   content: counter(titleList, decimal) ". ";
 }
 
-.main hr {
+.section-content + hr {
   display: none;
 }
 
+.section-content li {
+  color: var(--white20);
+  line-height: 24px;
+}
+
+.section-content ul li::marker {
+  content: "•  ";
+  color: var(--white30);
+}
+
 .wrapper {
-  max-inline-size: 902px;
+  max-inline-size: 636px;
   margin: auto;
 }
 
@@ -169,12 +245,8 @@ blockquote p {
   padding-inline: 16px;
 }
 
-.slider {
-}
-
 .slider-container {
   display: block;
-  /* block-size: 100px; */
   overflow: hidden;
   scroll-behavior: smooth;
   white-space: nowrap;
@@ -225,6 +297,11 @@ blockquote p {
   border: none;
 }
 
+.footer-content {
+  padding-block-start: 48px;
+  text-align: center;
+}
+
 @media screen and (min-width: 1366px) {
   .hero {
     block-size: 350px;
@@ -235,21 +312,62 @@ blockquote p {
     inset-block-start: -45px;
   }
 
+  .aside-content {
+    position: relative;
+    inset-block-start: 64px;
+    padding-inline: 0;
+  }
+
   .header-content {
     position: relative;
-    inset-block-start: 65px;
+    inset-block-start: 353px;
     padding-inline: 0;
+  }
+
+  aside {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -330px;
+    inline-size: 306px;
   }
 
   header {
     position: absolute;
     inset-block-start: 0;
-    inset-inline-start: -232px;
-    inline-size: 188px;
+    inset-inline-start: -330px;
+    inline-size: 306px;
   }
 
   h1 {
-    font-size: 60px;
+    font-size: 64px;
+    font-weight: 700;
     margin-block-start: 64px;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-weight: 400;
+  }
+
+  blockquote p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  pre {
+    font-weight: 400;
+  }
+
+  .main-content {
+    padding-inline: 0;
   }
 }

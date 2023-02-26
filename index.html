@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles-logical.css" />
+    <link id="styles" rel="stylesheet" href="./css/styles-b.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <title>El blog de Héctor</title>
@@ -108,8 +108,31 @@
     <div class="hero"></div>
     <div class="header">
       <div class="wrapper">
+        <div class="aside-content">
+          <aside>
+            <h6>VARIANTES DEL PROYECTO</h6>
+            <ul>
+              <li id="styles-a">
+                <a href="#">Nemium A</a>
+              </li>
+              <li id="styles-b" class="active">
+                <a href="#">Nemium B</a>
+              </li>
+              <li id="styles-c">
+                <a href="#">Nemium C</a>
+              </li>
+              <li id="styles-d">
+                <a href="#">Nemium D</a>
+              </li>
+              <li id="styles-e">
+                <a href="#">Nemium E</a>
+              </li>
+            </ul>
+          </aside>
+        </div>
         <div class="header-content">
           <header>
+            <h6>CONTENIDO</h6>
             <nav>
               <details open>
                 <summary>Setup</summary>
@@ -128,7 +151,7 @@
                   </li>
                 </ol>
               </details>
-              <details open>
+              <details>
                 <summary>Conceptos esenciales del Desarrollo Web</summary>
                 <ol>
                   <li>
@@ -165,6 +188,7 @@
             aprendiendo HTML y CSS para la creación de contenidos, en el nivel 2
             aprenderás de componentes y en 3 sobre layouts.
           </p>
+
           <hr />
 
           <section class="section-content">
@@ -371,16 +395,9 @@
                 padding-block-end | padding-inline-start | padding-inline-end
               </li>
             </ul>
-
-            <h2>Modelo de caja</h2>
-            <img
-              src="./images/noterindas.png"
-              alt="Programar cambió mi vida. #NOTERINDAS"
-              title="Programar cambió mi vida. #NOTERINDAS"
-            />
           </section>
           <div class="section-content">
-            <h2>Hola!</h2>
+            <h2>Modelo de caja</h2>
             <div class="slider">
               <scroll-container class="slider-container">
                 <scroll-page class="slider-slide" id="video-1">
@@ -443,6 +460,30 @@
         </div>
       </div>
     </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-content">
+          <p>@hectormr206</p>
+          <p>
+            <img
+              src="./images/instagram.png"
+              alt="Icono de Instagram"
+              title="Icono de Instagram"
+            />
+            <img
+              src="./images/facebook.png"
+              alt="Icono de Facebook"
+              title="Icono de Facebook"
+            />
+            <img
+              src="./images/twitter.png"
+              alt="Icono de Twitter"
+              title="Icono de Twitter"
+            />
+          </p>
+        </div>
+      </div>
+    </footer>
     <script src="./js/index.js"></script>
   </body>
 </html>
