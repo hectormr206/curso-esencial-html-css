@@ -1,0 +1,254 @@
+@import url("./styles.css");
+
+:root {
+  font-size: 16px;
+  font-family: "Roboto", system-ui, sans-serif;
+}
+
+aside {
+  position: absolute;
+  /* top: 64px; */
+  /* left: -232px; */
+  width: 188px;
+}
+
+aside h6 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+aside ul {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+aside li {
+  list-style: none;
+  color: var(--gray5);
+  padding: 8px;
+}
+
+aside a {
+  color: var(--white20);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+aside a:hover {
+  color: var(--black);
+}
+
+aside .active {
+  background: var(--black);
+  border-radius: 4px;
+}
+
+aside .active a {
+  color: var(--white);
+}
+
+header {
+  font-size: 0.875em;
+  width: 188px;
+  color: var(--gray10);
+  position: absolute;
+  top: 353px;
+  /* left: -232px; */
+}
+
+header a {
+  color: var(--gray10);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--gray30);
+}
+
+header li {
+  margin-bottom: 16px;
+}
+
+nav details summary {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+h1 {
+  font-size: 3.75em;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  font-weight: normal;
+}
+
+hr {
+  margin: 64px 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 64px 0 40px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+  top: 0;
+  background: white;
+}
+
+h6 {
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: normal;
+}
+
+pre {
+  background: var(--yellow);
+  padding: 40px;
+  font-family: "Roboto", system-ui, sans-serif;
+  line-height: 24px;
+}
+
+blockquote {
+  font-size: 24px;
+  margin: 32px 0;
+  padding-left: 16px;
+  border-left: 4px solid var(--gray30);
+  line-height: 24px;
+}
+
+blockquote span {
+  color: var(--gray10);
+}
+
+blockquote span::before {
+  content: "- ";
+}
+
+footer {
+  background: var(--gray20);
+  block-size: 174px;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+footer p {
+  color: var(--white);
+  margin-block-start: 0;
+  margin-block-end: 19px;
+  line-height: 44px;
+}
+
+.debug {
+  /* box-shadow: inset 0 0 0 2px aqua; */
+  outline: 2px solid aqua;
+  /* background: aqua;
+  border: 2px solid aqua;
+  box-sizing: border-box; */
+}
+
+.header {
+  position: sticky;
+  top: -45px;
+}
+
+.header-content,
+.aside-content {
+  position: relative;
+}
+
+.wrapper {
+  width: 1134px;
+  margin: auto;
+}
+
+.body-content {
+  position: relative;
+}
+
+.hero {
+  background: var(--yellow);
+  height: 350px;
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../images/patron.png");
+}
+
+.main {
+  margin-left: 232px;
+}
+
+.main .wrapper {
+  width: 902px;
+  margin: auto;
+}
+
+.section-content {
+  margin-bottom: 164px;
+}
+
+.section-content:first-of-type {
+  margin: 0;
+}
+
+.section-content ol li {
+  line-height: 24px;
+}
+
+.section-content ul li {
+  margin-bottom: 16px;
+}
+
+.section-content + hr {
+  display: none;
+}
+
+.section-content img {
+  display: block;
+  margin-top: 40px;
+}
+
+.section-content p {
+  line-height: 24px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  display: inline-block;
+  counter-increment: titleList;
+  padding-bottom: 8px;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal) ". ";
+}
+
+.section-content h3::after {
+  content: "";
+  /* width: 100%; */
+  height: 4px;
+  background-color: var(--gray30);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.footer-content {
+  padding-block-start: 48px;
+  text-align: center;
+}

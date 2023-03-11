@@ -1,58 +1,17 @@
-@font-face {
-  font-family: "charter";
-  src: url("../fonts/charter-regular.otf");
-  font-style: normal;
-  font-weight: 400;
-}
-@font-face {
-  font-family: "charter";
-  src: url("../fonts/charter-italic.otf");
-  font-style: italic;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "charter";
-  src: url("../fonts/charter-bold.otf");
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "charter";
-  src: url("../fonts/charter-bold-italic.otf");
-  font-style: italic;
-  font-weight: bold;
-}
+@import url("./styles.css");
 
 :root {
   font-size: 17px;
-  /* font-family: charter; */
   font-family: "Nunito", system-ui, sans-serif;
-  --background: #251f24;
-  --black: #000000;
-  --button: #157efb;
-  --white30: white;
-  --white20: #a5a3a5;
-  --white10: #3a3539;
 }
 
 body {
   color: var(--white30);
   background: var(--background);
-  margin: 0;
 }
 
 a {
   color: var(--white30);
-}
-
-.header-content,
-.aside-content {
-  padding-inline: 20px;
-}
-
-.header-content h6 {
-  margin-block-start: 40px;
-  margin-block-end: 24px;
 }
 
 header {
@@ -118,15 +77,6 @@ aside li {
   padding: 8px;
 }
 
-aside .active {
-  background: var(--black);
-  border-radius: 4px;
-}
-
-aside .active a {
-  color: var(--white30);
-}
-
 aside a {
   color: var(--white20);
   text-decoration: none;
@@ -135,6 +85,15 @@ aside a {
 }
 
 aside a:hover {
+  color: var(--white30);
+}
+
+aside .active {
+  background: var(--black);
+  border-radius: 4px;
+}
+
+aside .active a {
   color: var(--white30);
 }
 
@@ -197,6 +156,16 @@ footer p {
   margin-block-start: 0;
   margin-block-end: 19px;
   line-height: 44px;
+}
+
+.header-content,
+.aside-content {
+  padding-inline: 20px;
+}
+
+.header-content h6 {
+  margin-block-start: 40px;
+  margin-block-end: 24px;
 }
 
 .hero {
